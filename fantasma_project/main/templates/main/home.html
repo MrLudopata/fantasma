@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fantasma</title>
+</head>
+<body style="text-align: center; margin-top: 100px;">
+    <h1>Haz clic aquí para ver un fantasma</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">FANTASMA</button>
+    </form>
+
+    {% if show_image %}
+        <img src="/media/fantasma.webp" alt="Fantasma" style="margin-top: 20px; width: 300px;">
+    {% endif %}
+</body>
+</html>
